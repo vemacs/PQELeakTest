@@ -32,7 +32,7 @@ public class PQELeakTest extends JavaPlugin implements Listener {
         }.runTaskTimer(this, 0, 100);
     }
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     public void onPlayerJoin(PlayerJoinEvent e) {
         playersFromEvent.add(e.getPlayer().getName());
     }
